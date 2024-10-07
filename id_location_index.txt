@@ -8,11 +8,3 @@
 8 => Banks and ATMs
 
 
-Structure of JSON Files:
-{
-    title: "", // Name of the location
-    content: "", // Description of Location
-    image: "AB1.jpg", // Path to Image. Just name of file in res folder is sufficient
-    latitude: "10.900442", // Latitude of Location
-    longitude: "76.902771", // Longitude of Location
-}
