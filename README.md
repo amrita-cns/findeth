@@ -24,8 +24,8 @@ A simple and easy to use Navigation System for Amrita Vishwa Vidyapeetham, Coimb
 
 
 ## Try it out at
-
-[Click Here-FINDETH](https://amrita-cns.github.io/findeth/)
+Click the link to open webpage
+[FINDETH](https://amrita-cns.github.io/findeth/)
 
 
 ## Acknowledgements
