@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Findeth - Reviews</title>
+    <link rel="icon" type="image/x-icon" href="../resources/Icon.png">
     <style>
         @font-face {
             font-family: jakarta;
@@ -132,13 +133,16 @@
             <h1>Share Your Thoughts</h1>
             <form id="reviewForm">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="your-name" required>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="your-email" required>
 
-                <label for="response">Your Review:</label>
-                <textarea id="response" name="response" rows="4" required></textarea>
+                <label for="number">Number:</label>
+                <input type="text" id="number" name="your-number" required>
+
+                <label for="message">Your Review:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
 
                 <button type="submit">Submit Review</button>
             </form>
@@ -146,27 +150,24 @@
     </div>
 
     <script>
-        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwxTMbNHMoQoXkm2dW_rottRfLKt2_JgkGDhwMZfZyUVccXwPKKnU9pcFBzFwE1o41OEQ/exec';
+        const form = document.getElementById('reviewForm');
+
+        form.addEventListener('submit', e => {
             e.preventDefault();
-
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const response = document.getElementById('response').value;
-
-            // Get existing reviews from localStorage or initialize an empty array
-            let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
-
-            // Add new review
-            reviews.push({ name, email, response });
-
-            // Save updated reviews to localStorage
-            localStorage.setItem('reviews', JSON.stringify(reviews));
-
-            alert('Thank you for your review! It has been submitted successfully.');
-            this.reset();
-
-            // Log the reviews (for debugging purposes)
-            console.log('Current reviews:', reviews);
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    if (response.ok) {
+                        alert("Thank you! Your review has been submitted successfully.");
+                        form.reset();
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    alert("An error occurred. Please try again.");
+                });
         });
     </script>
 </body>
