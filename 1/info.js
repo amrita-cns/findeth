@@ -23,6 +23,14 @@ var information_id1 = [
     latitude: "10.906206",
     longitude: "76.897803",
   },
+  // {
+  //   title: "Academic Block - 4", // Name of the location
+  //   content: "AB3 is home to the School of Computing and the School of Artificial Intelligence. This block is the center for all things computing, programming, and AI, with modern computer labs and cutting-edge technology for research in machine learning, data science, and more.", // Description
+  //   image: "AB4.jpg", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
+  //   latitude: "10.904004",
+  //   longitude: "76.903915",
+  // },
+
 
   {
     title: "Amrita School of business", // Name of the location
