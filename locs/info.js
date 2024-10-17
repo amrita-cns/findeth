@@ -2,6 +2,14 @@
 
 var all_places = [
   "Campus Map", // Title of the page
+
+  {
+    name: "Amrita Coimbatore", // Name of the marker
+    latitude: "10.903538",
+    longitude: "76.899816",
+  },
+
+
   {
     name: "AB1", // Name of the marker
     latitude: "10.900442",
