@@ -1,5 +1,5 @@
 var information_id4 = [
-  "Conference Halls", // Page Title Here
+  "Halls", // Page Title Here
   {
     title: "Amriteshwari Hall", // Name of the location
     content: "Amriteshwari Hall at Amrita Vishwa Vidyapeetham is a modern venue designed for academic and cultural events. It features advanced audio-visual equipment, comfortable seating, and a spacious stage. The hall is ideal for hosting seminars, conferences, workshops, and performances. Its central location within the campus ensures easy access for students and faculty. Regular maintenance ensures a high-quality environment for all events.", // Description
