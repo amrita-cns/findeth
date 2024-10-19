@@ -44,7 +44,7 @@ function success(position) {
 }
 
 function getRoute() {
-    navigator.geolocation.watchPosition(success, error, options_for_map);
+    navigator.geolocation.getCurrentPosition(success, error, options_for_map);
 }
 
 function updateMapHeight() {
